@@ -14,7 +14,7 @@
 | **3.4** | 可靠数据传输的原理 (Principles of Reliable Data Transfer) | [笔记](./3.4_Principles_of_Reliable_Data_Transfer.md) |
 | **3.5** | 面向连接的传输：TCP (Connection-Oriented Transport: TCP) | [笔记](./3.5_TCP_Connection_Oriented_Transport.md) |
 | **3.6** | 拥塞控制原理 (Principles of Congestion Control) | [笔记](./3.6_Principles_of_Congestion_Control.md) |
-| **3.7** | TCP 拥塞控制 (TCP Congestion Control) | [笔记](./3.7-TCP拥塞控制.md) |
+| **3.7** | TCP 拥塞控制 (TCP Congestion Control) | [笔记](./3.7_TCP_Congestion_Control.md) |
 
 ---
 
