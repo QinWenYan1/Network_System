@@ -1,15 +1,6 @@
 # 📡 Network System Note 
 
-> 计算机网络秋招面试复习笔记 
-
----
-
-<details open>
-<summary><h2>📋 关于本仓库</h2></summary>
-
-### 🎯 目的
-
-系统学习计算机网络核心知识
+> 计算机网络复习笔记 ｜ 计算机网络核心知识点
 
 ### 📝 内容
 
@@ -18,23 +9,32 @@
 - **原始资料**：课程PPT及标注版本
 
 
-</details>
-
 ---
 
 <details open>
 <summary><h2>🧭 章节导航</h2></summary>
 
-| 章节 | 标题 | Lab |
-|------|------|-----|
-| [Chapter01](./Chapter01_Computer_Networks_overview/README.md) | 计算机网络概述 | - |
-| [Chapter02](./Chapter02_Application_Layer/README.md) | 应用层 | - |
-| [Chapter03](./Chapter03_Transport_Layer/README.md) | 传输层 | - |
-| [Chapter04](./Chapter04_Network_Layer_data_plane%20/README.md) | 网络层：数据平面 | - |
-| [Chapter05](./Chapter05_Network_Layer_Control_Plane/README.md) | 网络层：控制平面 | - |
-| [Chapter06](./Chapter06_Link_Layer/README.md) | 链路层和局域网 | - |
-| - | - | - |
-| [Chapter08](./Chapter08_Network_Security/README.md) | 网络安全 | - |
+
+#### [Chapter01 计算机网络概述](./Chapter01_Computer_Networks_overview/README.md)
+- **关键词**：网络边缘、网络核心、分组交换、电路交换、时延、吞吐量、协议层次
+
+#### [Chapter02 应用层](./Chapter02_Application_Layer/README.md)
+- **关键词**：HTTP、SMTP、DNS、P2P、Socket编程、Web缓存、Cookie
+
+#### [Chapter03 传输层](./Chapter03_Transport_Layer/README.md)
+- **关键词**：TCP、UDP、可靠传输、流量控制、拥塞控制、三次握手、四次挥手
+
+#### [Chapter04 网络层：数据平面](./Chapter04_Network_Layer_data_plane/README.md)
+- **关键词**：IP、路由器、NAT、IPv6、分片、转发表、SDN、OpenFlow
+
+#### [Chapter05 网络层：控制平面](./Chapter05_Network_Layer_Control_Plane/README.md)
+- **关键词**：RIP、OSPF、BGP、路由算法、LS、DV、ICMP、SNMP、SDN控制器
+
+#### [Chapter06 链路层和局域网](./Chapter06_Link_Layer/README.md)
+- **关键词**：以太网、ARP、MAC地址、交换机、VLAN、CRC、CSMA/CD
+
+#### [Chapter08 网络安全](./Chapter08_Network_Security/README.md)
+- **关键词**：加密、认证、完整性、SSL/TLS、防火墙、入侵检测、公钥私钥
 </details>
 
 ---
