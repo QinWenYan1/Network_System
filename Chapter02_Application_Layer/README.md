@@ -102,6 +102,18 @@
   - UDP 无连接意味着无状态——服务器如何区分不同客户端？通过 `recvfrom()` 返回的客户端地址识别
   - UDP 的不可靠性对应用层的影响——需要应用层自行实现重传、排序、差错恢复（如 QUIC 在 UDP 之上实现可靠传输）
 
+### 2.10 [I/O多路复用：select/poll/epoll](./2.10_IO_Multiplexing_select_poll_epoll.md)
+- **核心**：
+  - `I/O多路复用(I/O Multiplexing)`——一个进程监控多个 Socket，通过一次系统调用获取多个事件
+  - `select`——BitsMap 位图，两次遍历+两次拷贝，`FD_SETSIZE` 限制 1024 个 fd
+  - `poll`——动态数组 `pollfd[]` 突破 1024 限制，但仍需 O(n) 全量遍历
+  - `epoll`——红黑树管理 + 就绪链表回调，O(1) 获取就绪事件，解决 C10K 的利器
+  - `水平触发(LT) vs 边缘触发(ET)`——LT 反复通知，ET 仅通知一次需配合非阻塞 I/O
+- **难点**：
+  - epoll 的事件驱动回调机制——为什么不需要像 select/poll 那样全量遍历
+  - ET 模式下必须读到 `EAGAIN`——否则剩余数据不触发新通知，永久丢失
+  - select/poll 的"两次拷贝"开销——为什么每次都要传入整个 fd 集合
+
 ---
 
 ## 🔮 第2章展望
