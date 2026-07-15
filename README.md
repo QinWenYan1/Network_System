@@ -19,7 +19,7 @@
 - **关键词**：网络边缘、网络核心、分组交换、电路交换、时延、吞吐量、协议层次
 
 #### [第2章 应用层](./Chapter02_Application_Layer/README.md)
-- **关键词**：HTTP、SMTP、DNS、P2P、Socket编程、Web缓存、Cookie、select/poll/epoll、I/O多路复用
+- **关键词**：HTTP、SMTP、DNS、P2P、Socket编程、Web缓存、Cookie、select/poll/epoll、I/O多路复用、Reactor/Proactor、事件驱动
 
 #### [第3章 传输层](./Chapter03_Transport_Layer/README.md)
 - **关键词**：TCP、UDP、可靠传输、流量控制、拥塞控制、三次握手、四次挥手

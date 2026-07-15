@@ -114,6 +114,19 @@
   - ET 模式下必须读到 `EAGAIN`——否则剩余数据不触发新通知，永久丢失
   - select/poll 的"两次拷贝"开销——为什么每次都要传入整个 fd 集合
 
+### 2.11 [Reactor与Proactor网络模式](./2.11_Reactor_Proactor_Pattern.md)
+- **核心**：
+  - `Reactor 模式(Reactor Pattern)`——I/O 多路复用的面向对象封装，也叫 Dispatcher 模式，监听事件 → 分发处理
+  - `单 Reactor 单进程/线程`——一个执行单元包揽全部，实现简单，Redis 6.0 前采用，适用业务极快的场景
+  - `单 Reactor 多线程`——Handler 只负责收发，业务交给子线程 Processor 池，可利用多核但 Reactor 本身成瓶颈
+  - `主从 Reactor 多线程`——MainReactor 专接连接，SubReactor 负责读写+业务，Netty/Memcache 采用，分工明确扩展性好
+  - `Proactor 模式(Proactor Pattern)`——异步 I/O 模型，OS 自动完成数据读写，Linux 不支持网络 Socket 真异步，Windows IOCP 可用
+- **难点**：
+  - Reactor vs Proactor 的本质区别——前者感知"可读可写"（主动 read/write），后者感知"已完成读写"（OS 全包）
+  - 主从 Reactor 为何比单 Reactor 多线程更优——前者子线程独立完成 send，无需回传结果给主线程，消除复杂同步
+  - Nginx 多进程的惊群问题——多个 worker 同时 accept 同一 socket，通过互斥锁保证一次只有一个子进程 accept
+  - 阻塞/非阻塞/同步/异步 四个概念区分——非阻塞 ≠ 异步，非阻塞 read 最后拷贝步骤仍需要线程同步等待
+
 ---
 
 ## 🔮 第2章展望
