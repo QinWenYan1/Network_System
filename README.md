@@ -1,6 +1,6 @@
 # 📡 Network System Note 
 
-> 计算机网络复习笔记 ｜ 计算机网络核心知识点
+> 计算机网络学习笔记 ｜ 计算机网络核心知识点
 
 ### 📝 内容
 
@@ -8,6 +8,7 @@
 
 - **原始资料**：课程PPT及标注版本
 
+- **补充资料**：[小林coding](https://www.xiaolincoding.com/network/#%E9%80%82%E5%90%88%E4%BB%80%E4%B9%88%E7%BE%A4%E4%BD%93)
 
 ---
 
